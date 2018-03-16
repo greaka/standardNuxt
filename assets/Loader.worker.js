@@ -1,7 +1,7 @@
 const msg = 'world!'
 
 self.addEventListener('message', event => {
-    console.log(event.data)
+    console.log(JSON.stringify(event.data))
     self.postMessage({ hello: msg })
 })
 

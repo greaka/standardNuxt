@@ -30,6 +30,12 @@ import Worker from '~/assets/Loader.worker.js'
 console.log(Worker)
 const worker = new Worker // <- this line fails!
 
+worker.onmessage = function(event) {
+    console.log("Reply: " + JSON.stringify(event.data));
+}
+
+worker.postMessage("Hello Worker")
+
 export default {
   components: {
     AppLogo
