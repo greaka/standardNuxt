@@ -25,6 +25,11 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 
+import Worker from '~/assets/Loader.worker.js'
+
+console.log(Worker)
+const worker = new Worker // <- this line fails!
+
 export default {
   components: {
     AppLogo
